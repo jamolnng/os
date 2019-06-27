@@ -6,7 +6,7 @@ set(arch i686)
 set(target ${arch}-elf)
 
 set(CMAKE_ASM_NASM_OBJECT_FORMAT elf32)
-project(${program_name} VERSION 0.0.0.1 LANGUAGES C CXX ASM NONE)
+project(${program_name} VERSION 0.0.0.1 LANGUAGES C CXX ASM)
 
 set(CMAKE_C_COMPILER $ENV{HOME}/opt/cross/bin/${target}-gcc)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DVERSION=\"${PROJECT_VERSION}\" -g -D__is_libk -ffreestanding -mno-red-zone -fno-exceptions -nostdlib -Wall -Wextra -Werror -T ${PROJECT_SOURCE_DIR}/src/kernel/arch/${arch}/linker.ld")
